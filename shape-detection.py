@@ -29,6 +29,7 @@ while(cap.isOpened()):
                 cv2.putText(frame,'Rectangle',(x,y),cv2.FONT_HERSHEY_SIMPLEX,scale,(255, 0, 0),2,cv2.LINE_AA)
                 print("Sending rectangle")
                 ser.write(b"rectangle\n")
+                
         cv2.imshow('frame',frame)
         cv2.imshow('canny',canny)
         if cv2.waitKey(1) & 0xFF == ord('q'):
