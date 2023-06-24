@@ -9,30 +9,31 @@ Servo s2;
 Servo s3;
 
 /////////////////////////////////////////////Servo////////////////////////////////////////////////
-void servo1() // Set the first servo motor to rotate 45 degrees in t=4.25s
+void servo1() // Set the first servo motor to rotate 45 degrees in 4.25s
 {
   s1.write(135);
   delay(4250);
   s1.write(180);
 }
 
-void servo2() // Set the second servo motor to rotate 45 degrees in t=4.25s
+void servo2() // Set the second servo motor to rotate 45 degrees in 4.25s
 {
   s2.write(45);
   delay(4250);
   s2.write(0);
 }
 ////////////////////////////////////////Conveyor////////////////////////////////////////////////
-void Conveyor_on() //Turn on the conveyor motor
+void Conveyor_on() // Turn on the conveyor motor
 {
   digitalWrite(IN1, LOW);
   analogWrite(IN2, 180);
 }
-void Conveyor_off() //Turn off the conveyor motor
+void Conveyor_off() // Turn off the conveyor motor
 {
   digitalWrite(IN1, LOW);
   analogWrite(IN2, LOW);
 }
+///////////////////SETUP////////////////////////////////////
 void setup() 
 {
   pinMode(IN1, OUTPUT); // Setup the pins
@@ -49,7 +50,7 @@ void setup()
   s2.write(0);
   Serial.begin(9600);
 }
-/////////////////// LOOP////////////////////////////////////
+///////////////////LOOP////////////////////////////////////
 void loop()
 {
   // Check for objects
@@ -58,7 +59,7 @@ void loop()
   {
     Conveyor_on();
   }
-  else              // If there's no object, run the conveyor
+  else              
   { 
     delay(550);
     Conveyor_off();
