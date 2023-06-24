@@ -23,12 +23,12 @@ void servo2() // Set the second servo motor to rotate 45 degrees in t=4.25s
   s2.write(0);
 }
 ////////////////////////////////////////Conveyor////////////////////////////////////////////////
-void Conveyor_on() // Turn on the conveyor motor
+void Conveyor_on() //Turn on the conveyor motor
 {
   digitalWrite(IN1, LOW);
   analogWrite(IN2, 180);
 }
-void Conveyor_off() // Turn off the conveyor motor
+void Conveyor_off() //Turn off the conveyor motor
 {
   digitalWrite(IN1, LOW);
   analogWrite(IN2, LOW);
